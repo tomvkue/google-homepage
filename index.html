@@ -2,8 +2,9 @@
 <html>
 <head>
     <style>
-        body, header, footer{
+        body{
             font-family:arial, sans-serif;
+            min-height:100%;
         }
         #top-navbar-border{
             top:16px;
@@ -11,21 +12,21 @@
         }
         #navbar{
             display: inline;
-            text-shadow: 0 0 0 !important;
-            font-size: 14px;
+            /*text-shadow: 0 0 0 !important;*/
+            font-size: 13px;
             line-height: 24px;
-            color: rgba(0,0,0,0.87);
+            color: black;
             text-decoration: none;
-            text-decoration-style: solid;
             text-decoration-line:none;
-            
+        }
+        .nav-link{
+            opacity:0.75;
         }
         #left-navbar{
             display:flex;
             flex: 0 1 auto;
             flex-direction: row;
             float:left;
-            
         }
         #right-navbar{
             float:right;
@@ -34,6 +35,7 @@
             flex-direction:row;
             align-items: center;
             padding-right:30px;
+    
         }
         a{
             color:inherit;
@@ -42,8 +44,12 @@
         a:hover{
             text-decoration:underline;
         }
-        .nav-padding{
+        .nav-link{
             padding-left: 15px;
+        }
+        .nav-img{
+            padding-left:15px;
+            padding-right:15px;
         }
         #nav-anchor{
             display: block;
@@ -67,6 +73,26 @@
             border-radius: 2px;
         }
 
+        #logo-container{
+            position:absolute;
+            top:200px;
+            left:200px;
+            right:100px;
+            bottom:200px;
+
+        }
+
+        #google-logo{
+            position:absolute;
+            top:0;
+            left:0;
+            right:0;
+            bottom:0;
+            margin:auto;
+            padding-bottom:200px;
+        }
+
+
         #footer-bar{
             background: #f2f2f2;
             border-top: 1px solid #dadce0;
@@ -78,15 +104,14 @@
             width:100%;
             
             display: inline;
-            text-shadow: 0 0 0 !important;
             font-size: 14px;
-            color: #70757a;
             text-decoration: none;
             text-decoration-style: solid;
             text-decoration-line:none;
         }
         #footer-bar a{
             padding-left: 27px;
+            color:#5f6368;
         }
         
         #left-footer-bar{
@@ -96,8 +121,6 @@
             flex-direction: row;
             min-width: 30%;
             text-align: left;
-            
-            
         }
         #right-footer-bar{
             float: right;
@@ -107,67 +130,64 @@
             padding-right: 30px;
         }
         
-            /*background-size: 528px 68px;
-            
-            
-            border-radius: 2px;
-            box-sizing:border-box;
-            vertical-align:middle;
-            display:inline-block;*/
-        
     </style>
 </head>
 
-<header>
-    <div id="top-navbar-border">
-        <div id="nav-container">  
-                <div id="navbar">
-                    <div id="left-navbar">
-                        <div class="nav-padding"></div>
-                        <div class="nav-link"><a href="#">About</a></div>
-                        <div class="nav-padding"></div>
-                        <div class="nav-link"><a href="#">Store</a></div>
-                    </div>
-                    
-                    <div id="right-navbar" style="min-width: 222px;">
-                        <div class="nav-link"><a href="#">Gmail</a></div>
-                        <div class="nav-padding"></div>
-                        <div class="nav-link"><a href="#">Images</a></div>
-                        <div class="nav-padding"></div>
-                        <div class="nav-img"><a id ="nav-anchor" title="Google apps" href="#"></a></div>
-                        <div class="nav-padding"></div>
-                        <div class="nav-link" id="sign-in"><a href="#">Sign-in</a></div>
-                    </div>
-                </div>
-        </div>
-    </div>
-    
 
-</header>
 
 <body>
-    <div class="search-container">
-    </div>
+    <header>
+        <div id="top-navbar-border">
+            <div id="nav-container">  
+                    <div id="navbar">
+                        <div id="left-navbar">
+                            <div class="nav-link"><a href="#">About</a></div>
+                            <div class="nav-link"><a href="#">Store</a></div>
+                        </div>
+                        
+                        <div id="right-navbar" style="min-width: 222px;">
+                            <div class="nav-link"><a href="#">Gmail</a></div>
+                            <div class="nav-link"><a href="#">Images</a></div>
+                            <div class="nav-img"><a id ="nav-anchor" title="Google apps" href="#"></a></div>
+                            <div class="nav-link" id="sign-in"><a href="#">Sign-in</a></div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+        
+    
+    </header>
+    <main>
+        <div id="logo-container">
+            <img id="google-logo" alt="Google" src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" width="272" height ="92">
+
+        </div>
+        <div class="search-container">
+        </div>
+    </main>
+
+
+    <footer>
+        <div id="footer-bar">
+            <div id="left-footer-bar">
+                <div class="footer-link"><a href="#">Advertising</a></div>
+                <div class="footer-link"><a href="#">Business</a></div>
+                <div class="footer-link"><a href="#">How Search works</a></div>
+            </div>
+            <div id="right-footer-bar">
+                <div class="footer-link"><a href="#">Privacy</a></div>
+                <div class="footer-link"><a href="#">Terms</a></div>
+                <div class="footer-link"><a href="#">Settings</a></div>
+                
+            </div>
+    
+    
+        </div>
+    
+    </footer>
 
 </body>
 
-<footer>
-    <div id="footer-bar">
-        <div id="left-footer-bar">
-            <div class="footer-link"><a href="#">Advertising</a></div>
-            <div class="footer-link"><a href="#">Business</a></div>
-            <div class="footer-link"><a href="#">How Search works</a></div>
-        </div>
-        <div id="right-footer-bar">
-            <div class="footer-link"><a href="#">Privacy</a></div>
-            <div class="footer-link"><a href="#">Terms</a></div>
-            <div class="footer-link"><a href="#">Settings</a></div>
-            
-        </div>
 
-
-    </div>
-
-</footer>
 
 </html>
