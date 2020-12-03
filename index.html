@@ -4,7 +4,8 @@
     <style>
         body{
             font-family:arial, sans-serif;
-            min-height:100%;
+            overflow-y:hidden;
+            overflow-x:hidden;
         }
         #top-navbar-border{
             top:16px;
@@ -12,7 +13,6 @@
         }
         #navbar{
             display: inline;
-            /*text-shadow: 0 0 0 !important;*/
             font-size: 13px;
             line-height: 24px;
             color: black;
@@ -67,31 +67,150 @@
             border: 1px solid #4285f4;
             font-weight: bold;
             color:#fff;
-            background-image: linear-gradient(rgb(67, 135, 253), rgb(70,131,234));
+            background: #4285f4;
             line-height:28px;
             padding: 0 12px;
             border-radius: 2px;
         }
+        #sign-in:hover{
+            box-shadow: 0 1px 0 rgba(0,0,0,.15);
+        }
 
-        #logo-container{
-            position:absolute;
-            top:200px;
-            left:200px;
-            right:100px;
-            bottom:200px;
-
+        .logo-container{
+            position: absolute;
+            width: 100%;
+            margin-top:47px;
         }
 
         #google-logo{
-            position:absolute;
-            top:0;
-            left:0;
-            right:0;
-            bottom:0;
-            margin:auto;
-            padding-bottom:200px;
+            display:block;
+            margin: 0 auto;
         }
 
+        
+        .search-form-container{
+            top:269px;
+            position:absolute;
+            width:100%;
+        }
+
+        #the-search-form{
+            width: 484px;
+            margin: 0 auto;
+            padding-top: 6px;
+        }
+
+        .search-buttons{
+            padding-top:18px;
+        }
+        
+        .the-search-button{
+            background-color: #f8f9fa;
+            border: 1px solid #f8f9fa;
+            border-radius: 4px;
+            color: #3c4043;
+            font-family: arial,sans-serif;
+            font-size: 14px;
+            margin: 11px 4px;
+            padding: 0 16px;
+            line-height: 27px;
+            height: 36px;
+            min-width: 54px;
+            text-align: center;
+            cursor: pointer;
+            user-select: none;
+        }
+
+        .the-search-button:hover{
+            box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+            background-color: #f8f9fa;
+            border: 1px solid #dadce0;
+            color: #202124;
+        }
+
+        #feeling-lucky{
+            background-color: #f8f9fa;
+            border: 1px solid #f8f9fa;
+            border-radius: 4px;
+            color: #3c4043;
+            font-family: arial,sans-serif;
+            font-size: 14px;
+            margin: 11px 4px;
+            padding: 0 16px;
+            line-height: 27px;
+            height: 36px;
+            min-width: 54px;
+            text-align: center;
+            cursor: pointer;
+            user-select: none;
+        }
+        #feeling-lucky:hover{
+            box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+            background-color: #f8f9fa;
+            border: 1px solid #dadce0;
+            color: #202124;
+        }
+
+        .search-border{
+            background:#fff;
+            display: flex;
+            border: 1px solid #dfe1e5;
+            box-shadow: none;
+            border-radius: 24px;
+            height: 44px;
+            flex: 1;
+            flex-wrap:wrap;
+        }
+        .search-border:hover{
+            box-shadow: 0 1px 6px rgba(32,33,36,.28);
+            border-color: rgba(223,225,229,0);
+        }
+
+        .search-flex-container{
+            display: flex;
+            flex: 1;
+            padding: 5px 8px 0 16px;
+            padding-left: 14px;
+        }
+        .search-icon-flex-container{
+            display: flex;
+            align-items:center;
+            padding-right: 13px;
+            margin-top: -5px;
+        }
+
+        .search-icon{
+            height:20px;
+            width:20px;
+            margin-top:3px;
+            fill: #9aa0a6;
+        }
+
+        .search-text-flex-container{
+            display:flex;
+            flex-basis: 100%;
+        }
+        .search-text{
+            display:flex;
+            flex:1;
+        }
+        
+
+        .search-input{
+            background-color: transparent;
+            border: none;
+            color: rgba(0,0,0,.87);
+            word-wrap: break-word;
+            outline: none;
+            display: flex;
+            flex: 1;
+            height: 34px;
+            font-size: 16px;
+        }
+
+        .search-buttons{
+            margin: 0 auto;
+        }
 
         #footer-bar{
             background: #f2f2f2;
@@ -158,12 +277,37 @@
     
     </header>
     <main>
-        <div id="logo-container">
-            <img id="google-logo" alt="Google" src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" width="272" height ="92">
+        <div class="logo-container">
+            <img id="google-logo" alt="Google" src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" width="272" height ="92" style="padding-top:109px;">
+        </div>
+        <div class="search-form-container">
+            <form id="the-search-form" class="the-search-form">
+                    <div class="search-border">
+                        <div class="search-flex-container">
+                            <div class="search-icon-flex-container">
+                                <div class="search-icon">
+                                    <svg focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                        <path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z">
+                                        </path>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="search-text-flex-container">
+                                <div class="search-text">
+                                    <input class="search-input" maxlength="2048" name="q" type="text" aria-autocomplete="both" aria-haspopup="false" autocapitalize="none" autocomplete="off" autocorrect="off" autofocus="" role="combobox" spellcheck="false" title="Search" value="" aria-label="Search">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="search-buttons">
+                            <input class="the-search-button" value="Google Search" aria-label="Google Search" type="submit">
+                            <input id="feeling-lucky" value="I'm Feeling Lucky" aria-label="I'm Feeling Lucky" type="submit">
+                        </div>
+                    </div>
+                    
+            </form>
 
         </div>
-        <div class="search-container">
-        </div>
+
     </main>
 
 
